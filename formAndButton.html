@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: auto;
+            width: 400px;
+        }
+
+        
+        .btn {
+            position: relative;
+            z-index: 2;
+            display: block;
+            width: 160px;
+            height: 40px;
+            margin: 1em 2em 0 0;
+            color: white;
+            font-family: sans-serif;
+            box-shadow: inset 0px 8px 8px -8px white, 0px 8px 8px -4px black;
+            background: linear-gradient(to bottom, hsl(350, 70%, 60%), hsl(350, 60%, 50%));
+            border: 1px solid hsl(350, 40%, 50%);
+            border-radius: 3px;
+            border-bottom: 3px solid hsl(350, 40%, 50%);
+            outline: 1px solid lightgray;
+            outline-offset: 3px;
+            cursor: pointer;
+            
+        }
+
+        .btn:hover {
+            background: hsl(350, 100%, 80%);
+            border: 2px solid hsl(350, 60%, 65%);
+            border-bottom: 4px solid hsl(350, 40%, 50%);
+            box-shadow: inset 0px 8px 8px -8px white, 0px 8px 8px -4px black;
+            background: linear-gradient(to top, hsl(350, 100%, 70%), hsl(350, 60%, 50%));
+        }
+
+        form input {
+            padding: .4em;
+        }
+
+        input:focus {
+            border: 2px solid #000;
+            background: #F3F3F3;
+        }
+
+        legend{
+            font-family: sans-serif;
+            font-size: 1.3em;
+            font-variant: small-caps;
+            font-weight: bold;
+        }
+        label {
+            font-family: sans-serif;
+            display: block;
+            margin: 1em 0 0 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Alta en el servicio</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" />
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" size="50" />
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" size="10" maxlength="9" />
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" />
+            <input class="btn" type="submit" value="Darme de alta" />
+        </fieldset>
+    </form>
+</body>
+
+</html>
