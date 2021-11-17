@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animacion</title>
+    <style>
+      .movimiento1 {
+        width: 256px;
+        height: 308px;
+        background: url("imgs/mickey-sprite.png");
+        animation: play1 1s steps(8) infinite, play12 5s steps(5) infinite;
+      }
+
+      @keyframes play1 {
+        0% {
+          background-position-x: 0;
+        }
+
+        100% {
+          background-position-x: -2050px;
+        }
+      }
+
+      @keyframes play12 {
+        0% {
+          background-position-y: 0;
+        }
+
+        100% {
+          background-position-y: -1540px;
+        }
+      }
+
+      .movimiento2 {
+        height: 240px;
+        width: 190px;
+        background: url("imgs/foto.png");
+        animation: play2 0.5s steps(10) infinite;
+      }
+
+      @keyframes play2 {
+        0% {
+          background-position: 0;
+        }
+
+        100% {
+          background-position: 1900px;
+        }
+      }
+
+      .movimiento3 {
+        width: 256px;
+        height: 256px;
+        background: url("imgs/run.png");
+        animation: play3 0.5s steps(6) infinite;
+      }
+
+      @keyframes play3 {
+        0% {
+          background-position: 0;
+        }
+
+        100% {
+          background-position: 1550px;
+        }
+      }
+
+      .movimiento4 {
+        width: 47px;
+        height: 54px;
+        background: url("imgs/flags.png");
+        animation: play4 4s steps(30) infinite;
+      }
+
+      @keyframes play4 {
+        0% {
+          background-position-x: 0;
+        }
+
+        100% {
+          background-position-x: 1500px;
+        }
+      }
+
+      .movimiento5 {
+        width: 100px;
+        height: 100px;
+        background: url("imgs/explosion.png");
+        animation: play31 0.5s steps(6) infinite, play32 3s steps(6) infinite;
+      }
+
+      @keyframes play31 {
+        0% {
+          background-position-x: 0px;
+        }
+
+        100% {
+          background-position-x: -600px;
+        }
+      }
+
+      @keyframes play32 {
+        0% {
+          background-position-y: 0;
+        }
+
+        100% {
+          background-position-y: -600px;
+        }
+      }
+
+      .movimiento6 {
+        width: 1024px;
+        height: 200px;
+        background: url("imgs/money.jpg");
+        animation: play6 1s steps(7) infinite, play62 14s steps(5) infinite;
+      }
+
+      @keyframes play6 {
+        0% {
+          background-position-x: 0;
+        }
+
+        100% {
+          background-position-x: -1024px;
+        }
+      }
+
+      @keyframes play62 {
+        0% {
+          background-position-y: 0;
+        }
+
+        100% {
+          background-position-y: -1024px;
+        }
+      }
+
+      .movimiento7 {
+        width: 80px;
+        height: 95px;
+        background: url("imgs/Jason_Bourne.png");
+        animation: play7 1s steps(8) infinite, play72 8s steps(5) infinite;
+      }
+
+      @keyframes play7 {
+        0% {
+          background-position-x: 0;
+        }
+
+        100% {
+          background-position-x: -640px;
+        }
+      }
+      @keyframes play72 {
+        0% {
+          background-position-y: 0;
+        }
+
+        100% {
+          background-position-y: -480px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="movimiento1"></div>
+    <div class="movimiento2"></div>
+    <div class="movimiento3"></div>
+    <div class="movimiento4"></div>
+    <div class="movimiento5"></div>
+    <div class="movimiento40"></div>
+    <div class="movimiento7"></div>
+  </body>
+</html>
