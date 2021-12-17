@@ -1,4 +1,4 @@
-let map, infoWindow;
+let map;
 
 function initMap() { 39.630114,15.728312
   map = new google.maps.Map(document.getElementById("map"), {
