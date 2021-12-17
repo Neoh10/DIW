@@ -1,12 +1,12 @@
 let map, infoWindow;
 
-function initMap() { 39.630114,2.728312
+function initMap() { 39.630114,15.728312
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 39.630114, lng: 2.728312 },
-    zoom: 6,
+    center: { lat: 39.630114, lng: 15.728312 },
+    zoom: 5,
   });
-  infoWindow = new google.maps.InfoWindow();
-
+  
+  var coord = document.getElementById("coord");
   const locationButton = document.createElement("button");
 
   locationButton.textContent = "Activar geolocalización";
@@ -21,10 +21,14 @@ function initMap() { 39.630114,2.728312
             lng: position.coords.longitude,
           };
 
-          infoWindow.setPosition(pos);
-          infoWindow.setContent("Geolocalizado.");
-          infoWindow.open(map);
+          var markerPos = new google.maps.Marker({
+            position: pos,
+            map: map,
+        });
+          map.setZoom(10);
           map.setCenter(pos);
+          coord.innerHTML = "Latitud: " + position.coords.latitude + 
+        "<br>Longitud: " + position.coords.longitude;
         },
         () => {
           handleLocationError(true, infoWindow, map.getCenter());
@@ -36,35 +40,38 @@ function initMap() { 39.630114,2.728312
     
     const image =
       "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
-    const beachMarker = new google.maps.Marker({
+    const marker1 = new google.maps.Marker({
       position: { lat: 39.524545, lng: 2.499948 },
       map,
       icon: image,
     });
 
-    const image =
-      "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
-    const beachMarker = new google.maps.Marker({
-      position: { lat: 39.524545, lng: 2.499948 },
+    
+    const marker2 = new google.maps.Marker({
+      position: { lat: 39.571289, lng: 2.656733 },
       map,
       icon: image,
     });
 
-    const image =
-      "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
-    const beachMarker = new google.maps.Marker({
-      position: { lat: 39.524545, lng: 2.499948 },
+    
+    const marker3 = new google.maps.Marker({
+      position: { lat: 39.8934035, lng: 3.0736522 },
       map,
       icon: image,
     });
 
-    const image =
-      "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
-    const beachMarker = new google.maps.Marker({
-      position: { lat: 39.524545, lng: 2.499948 },
+    
+    const marker4 = new google.maps.Marker({
+      position: { lat: 39.5436123, lng: 3.3315682 },
       map,
       icon: image,
     });
+
+    const marker5 = new google.maps.Marker({
+        position: { lat: 39.3193459, lng: 2.9889481 },
+        map,
+        icon: image,
+      });
   });
 }
 
